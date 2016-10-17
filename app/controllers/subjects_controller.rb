@@ -4,7 +4,9 @@ class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
   def index
-    @subjects = Subject.all
+    # @subjects = Subject.where(year_group:params[:year_group])
+    @subjects = Subject.where(year_group: params[:year_group])
+    # @subjects = Subject.all
   end
 
   # GET /subjects/1
